@@ -1,0 +1,17 @@
+{
+	"name": "ustring",
+	"version": "0.1",
+	"repo": "TingPing/ustring",
+	"description": "Utils for safely handling utf8 strings.",
+	"license": "MIT",
+	"src": [
+		"src/ustring.c",
+		"src/ustring.h"
+	],
+	"keywords": [
+		"c99",
+		"unicode",
+		"utf8",
+		"utf-8"
+	]
+}
