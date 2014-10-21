@@ -66,15 +66,15 @@ ucharlen (const char *str)
 size_t
 ustrlen (const char *str)
 {
-	if (str == NULL)
-		return 0;
+    if (str == NULL)
+        return 0;
 
-	size_t len = 0;
-	for (; *str != '\0'; str += ucharlen (str))
-	{
-		len++;
-	}
-	return len;
+    size_t len = 0;
+    for (; *str != '\0'; str += ucharlen (str))
+    {
+        len++;
+    }
+    return len;
 }
 
 // Used by both ustrlcpy() and ustrlcat()
