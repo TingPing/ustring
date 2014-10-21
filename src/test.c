@@ -47,7 +47,7 @@ test_ustrlcpy (void)
 static void
 test_ustrlcat (void)
 {
-	char tmp[8] = "你";
+	char tmp[7] = "你";
 	size_t ret;
 
 	ret = ustrlcat (tmp, "好好", sizeof(tmp));

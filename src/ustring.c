@@ -133,8 +133,11 @@ ustrlcat (char *restrict dst, const char *restrict src, size_t n_bytes)
         return strlen (src);
 
     const char *dst_start = dst;
-    while (n_bytes-- != 0 && *dst != '\0')
+    while (n_bytes != 0 && *dst != '\0')
+    {
+        n_bytes--;
         dst++;
+    }
 
     return (dst - dst_start + utf8_copy (dst, src, n_bytes));
 }
