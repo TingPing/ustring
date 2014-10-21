@@ -70,8 +70,9 @@ ustrlen (const char *str)
         return 0;
 
     size_t len = 0;
-    for (; *str != '\0'; str += ucharlen (str))
+    while (*str != '\0')
     {
+        str += ucharlen (str);
         len++;
     }
     return len;
