@@ -34,6 +34,10 @@ test_ustrlcpy (void)
 	assert (ret > sizeof(tmp)); // is truncated
 	assert (strcmp (tmp, "©") == 0);
 
+	ret = ustrlcpy (tmp, "abc", sizeof(tmp));
+	assert (ret < sizeof(tmp)); // not truncated
+	assert (strcmp (tmp, "abc") == 0);
+
 	assert (ustrlcpy (tmp, "", 1) == 0);
 
 	// Test invalid inputs
