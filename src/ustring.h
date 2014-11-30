@@ -25,7 +25,7 @@
 
 #include <stddef.h> // For size_t
 
-size_t ucharlen (const char *str);
-size_t ustrlen (const char *str);
+size_t ucharlen (const char *str) __attribute__((pure));
+size_t ustrlen (const char *str) __attribute__((pure));
 size_t ustrlcat (char *restrict dst, const char *restrict src, size_t n_bytes);
 size_t ustrlcpy (char *restrict dst, const char *restrict src, size_t n_bytes);

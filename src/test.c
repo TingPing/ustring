@@ -9,7 +9,7 @@ test_ustrlen (void)
 {
 	assert (ustrlen ("©你好abc") == 6);
 	assert (ustrlen ("") == 0);
-	ustrlen (NULL);
+	assert (ustrlen (NULL) == 0);
 	
 	puts ("ustrlen() passed.");
 }
@@ -19,7 +19,7 @@ test_ucharlen (void)
 {
 	assert (ucharlen ("你好") == 3);
 	assert (ucharlen ("") == 1);
-	ucharlen (NULL);
+	assert (ucharlen (NULL) == 0);
 
 	puts ("ucharlen() passed.");
 }
